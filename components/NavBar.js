@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import { DataContext } from "../store/GlobalState";
 import Cookie from "js-cookie";
 import Image from "next/image";
+import { FaShoppingCart } from "react-icons/fa";
 
 function NavBar() {
   const router = useRouter();
@@ -102,10 +103,8 @@ function NavBar() {
           <li className="nav-item">
             <Link href="/cart">
               <a className={"nav-link icon-container" + isActive("/cart")}>
-                <i
-                  className="fas fa-shopping-cart position-relative"
-                  aria-hidden="true"
-                >
+                <div className="position-relative">
+                  <FaShoppingCart aria-hidden="true" />
                   <span
                     className="position-absolute"
                     style={{
@@ -120,7 +119,7 @@ function NavBar() {
                   >
                     {cart.length}
                   </span>
-                </i>{" "}
+                </div>{" "}
                 Cart
               </a>
             </Link>

@@ -53,20 +53,27 @@ const Cart = () => {
     const cartLocal = JSON.parse(localStorage.getItem("__next__cart01__devat"));
     if (cartLocal && cartLocal.length > 0) {
       let newArr = [];
+
       const updateCart = async () => {
         for (const item of cartLocal) {
           const res = await getData(`product/${item._id}`);
-          const { _id, title, images, price, inStock, sold } = res.product;
-          if (inStock > 0) {
-            newArr.push({
-              _id,
-              title,
-              images,
-              price,
-              inStock,
-              sold,
-              quantity: item.quantity > inStock ? 1 : item.quantity,
-            });
+
+          if (res.err)
+            dispatch({ type: "NOTIFY", payload: { error: res.err } });
+
+          if (!res.err) {
+            const { _id, title, images, price, inStock, sold } = res.product;
+            if (res.product && inStock > 0) {
+              newArr.push({
+                _id,
+                title,
+                images,
+                price,
+                inStock,
+                sold,
+                quantity: item.quantity > inStock ? 1 : item.quantity,
+              });
+            }
           }
         }
 

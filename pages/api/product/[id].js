@@ -24,7 +24,9 @@ const getProduct = async (req, res) => {
 
     const product = await Products.findById(id);
     if (!product)
-      return res.status(400).json({ err: "This product does not exist." });
+      return res
+        .status(400)
+        .json({ err: `This product ${id} does not exist.` });
 
     res.json({ product });
   } catch (err) {

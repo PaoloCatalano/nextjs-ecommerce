@@ -8,6 +8,8 @@ import valid, { validateNumber } from "../utils/valid";
 import { patchData } from "../utils/fetchData";
 import { rgbDataURL } from "../utils/blurData";
 import { imageUpload } from "../utils/imageUpload";
+import { FiCamera } from "react-icons/fi";
+import { FaTimes, FaCheck } from "react-icons/fa";
 // import { useUser } from "../utils/swr";
 
 const Profile = () => {
@@ -95,11 +97,6 @@ const Profile = () => {
         type: "NOTIFY",
         payload: { error: "Name cannot be empty." },
       });
-    } else if (name.includes(" ")) {
-      dispatch({
-        type: "NOTIFY",
-        payload: { error: "Name cannot have space." },
-      });
     } else if (address?.length > 100) {
       dispatch({
         type: "NOTIFY",
@@ -168,8 +165,6 @@ const Profile = () => {
       if (res.err)
         return dispatch({ type: "NOTIFY", payload: { error: res.err } });
 
-      console.log(res.user);
-
       dispatch({
         type: "AUTH",
         payload: {
@@ -233,7 +228,7 @@ const Profile = () => {
               blurDataURL={rgbDataURL()}
             />
             <span>
-              <i className="fas fa-camera"></i>
+              <FiCamera />
               <p>Change</p>
               <input
                 type="file"
@@ -392,16 +387,16 @@ const Profile = () => {
                     <td className="p-2">${order.total}</td>
                     <td className="p-2">
                       {order.delivered ? (
-                        <i className="fas fa-check text-success"></i>
+                        <FaCheck className="text-success"></FaCheck>
                       ) : (
-                        <i className="fas fa-times text-danger"></i>
+                        <FaTimes className="text-danger"></FaTimes>
                       )}
                     </td>
                     <td className="p-2">
                       {order.paid ? (
-                        <i className="fas fa-check text-success"></i>
+                        <FaCheck className="text-success"></FaCheck>
                       ) : (
-                        <i className="fas fa-times text-danger"></i>
+                        <FaTimes className="text-danger"></FaTimes>
                       )}
                     </td>
                   </tr>

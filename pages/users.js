@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import PleaseSign from "../components/PleaseSign";
 import GoBack from "../components/GoBack";
+import { FaTimes, FaCheck, FaEdit, FaTrashAlt } from "react-icons/fa";
 
 const Users = () => {
   const { state, dispatch } = useContext(DataContext);
@@ -50,12 +51,15 @@ const Users = () => {
               <th>
                 {user.role === "admin" ? (
                   user.root ? (
-                    <i className="fas fa-check text-success"> Root</i>
+                    <span className="text-success">
+                      <FaCheck className="text-success" />
+                      Root
+                    </span>
                   ) : (
-                    <i className="fas fa-check text-success"></i>
+                    <FaCheck className="text-success" />
                   )
                 ) : (
-                  <i className="fas fa-times text-danger"></i>
+                  <FaTimes className="text-danger" />
                 )}
               </th>
               <th>
@@ -67,14 +71,14 @@ const Users = () => {
                   }
                 >
                   <a>
-                    <i className="fas fa-edit text-info mr-2" title="Edit"></i>
+                    <FaEdit className="text-info mr-2" title="Edit" />
                   </a>
                 </Link>
 
                 {auth.user.root && auth.user.email !== user.email ? (
-                  <i
+                  <span
                     style={{ cursor: "pointer" }}
-                    className="fas fa-trash-alt text-danger ml-2"
+                    className="text-danger ml-2"
                     title="Remove"
                     data-toggle="modal"
                     data-target="#exampleModal"
@@ -91,13 +95,17 @@ const Users = () => {
                         ],
                       })
                     }
-                  ></i>
+                  >
+                    <FaTrashAlt />
+                  </span>
                 ) : (
-                  <i
-                    className="fas fa-trash-alt text-danger ml-2"
-                    title="Can't Remove"
-                    style={{ cursor: "not-allowed" }}
-                  ></i>
+                  <span>
+                    <FaTrashAlt
+                      className="text-success ml-2"
+                      title="Can't Remove"
+                      style={{ cursor: "not-allowed" }}
+                    />
+                  </span>
                 )}
               </th>
             </tr>

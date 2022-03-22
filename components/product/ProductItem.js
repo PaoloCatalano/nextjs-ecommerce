@@ -26,7 +26,7 @@ const ProductItem = ({ product, handleCheck }) => {
         <button
           className="btn btn-success"
           style={{ marginLeft: "5px", flex: 1 }}
-          disabled={prodSWR?.product.inStock === 0 ? true : false}
+          disabled={prodSWR?.product?.inStock === 0 ? true : false}
           onClick={() => {
             dispatch({ type: "NOTIFY", payload: { success: "Added to cart" } });
             return dispatch(addToCart(product, cart));
@@ -104,7 +104,7 @@ const ProductItem = ({ product, handleCheck }) => {
         <div className="row justify-content-between mx-0">
           <h6 className="text-danger">${product.price}</h6>
           {prodSWR ? (
-            prodSWR.product.inStock > 0 ? (
+            prodSWR.product?.inStock > 0 ? (
               <h6 className="text-danger">
                 In Stock: {prodSWR.product.inStock}
               </h6>

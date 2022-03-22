@@ -1,8 +1,9 @@
-import Head from "next/head";
 import { useContext, useState } from "react";
+import Head from "next/head";
 import { DataContext } from "../store/GlobalState";
 import { updateItem } from "../store/Actions";
 import { postData, putData } from "../utils/fetchData";
+import { FaTimes, FaCheck, FaEdit, FaTrashAlt } from "react-icons/fa";
 
 const Categories = () => {
   const [name, setName] = useState("");
@@ -83,13 +84,15 @@ const Categories = () => {
 
             {auth.user?.role === "admin" && (
               <div style={{ cursor: "pointer" }}>
-                <i
-                  className="fas fa-edit mr-2 text-info"
+                <span
+                  className="mr-2 text-info"
                   onClick={() => handleEditCategory(catogory)}
-                ></i>
+                >
+                  <FaEdit />
+                </span>
 
-                <i
-                  className="fas fa-trash-alt text-danger"
+                <span
+                  className="text-danger"
                   data-toggle="modal"
                   data-target="#exampleModal"
                   onClick={() =>
@@ -105,7 +108,9 @@ const Categories = () => {
                       ],
                     })
                   }
-                ></i>
+                >
+                  <FaTrashAlt />
+                </span>
               </div>
             )}
           </div>
