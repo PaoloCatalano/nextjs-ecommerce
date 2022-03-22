@@ -34,8 +34,7 @@ const updateRole = async (req, res) => {
 
 const deleteUser = async (req, res) => {
   try {
-    //    const result = await auth(req, res)
-    const result = await Users.findOne({ _id: req.cookies.userId });
+    const result = await auth(req, res);
 
     if (result.role !== "admin" || !result.root)
       return res.status(400).json({ err: "Authentication is not valid" });
