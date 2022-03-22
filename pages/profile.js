@@ -143,6 +143,11 @@ const Profile = () => {
         payload: { error: "Image format is incorrect." },
       });
 
+    dispatch({
+      type: "NOTIFY",
+      payload: { info: "Don't forget to UPDATE your profile!" },
+    });
+
     setData({ ...data, avatar: file });
   };
 

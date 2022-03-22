@@ -26,6 +26,14 @@ const Notify = () => {
         />
       )}
 
+      {notify.info && (
+        <Toast
+          msg={{ msg: notify.info, title: "Info" }}
+          handleShow={() => dispatch({ type: "NOTIFY", payload: {} })}
+          bgColor="bg-warning"
+        />
+      )}
+
       {notify.success && (
         <Toast
           msg={{ msg: notify.success, title: "Success" }}
