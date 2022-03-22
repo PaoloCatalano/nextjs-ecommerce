@@ -1,0 +1,96 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  object-fit: cover;
+  object-position: 0 30%;
+}
+
+/* ----------- Loading ------------- */
+@import url("./loading.css");
+
+/* ----------- Products ------------- */
+@import url("./product.css");
+
+/* ----------- Profile ------------- */
+@import url("./profile.css");
+
+/* ----------- Products Manager ------------- */
+@import url("./products_manager.css");
+
+/* NOTIFY */
+.fade-effect {
+  animation: fade-in 3s 1 forwards ease-in;
+}
+
+@keyframes fade-in {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  5% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  95% {
+    transform: scale(1);
+
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.1);
+
+    opacity: 0;
+  }
+}
+
+/* PRODUCT Page */
+
+.image-container {
+  width: 350px;
+  height: 350px;
+}
+@media screen and (min-width: 1200px) {
+  .image-container {
+    width: 550px;
+    height: 100%;
+  }
+}
+
+/* NAVBAR */
+.icon-container {
+  gap: 7px;
+  align-items: center;
+  display: inline-flex;
+}
+
+.icon-container span {
+  max-width: 170px;
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+.navbar-list {
+  align-items: center;
+}
+
+@media screen and (max-width: 992px) {
+  .navbar-list {
+    align-items: start;
+  }
+}
