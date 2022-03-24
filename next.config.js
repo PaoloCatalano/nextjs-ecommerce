@@ -22,4 +22,13 @@ module.exports = {
 
     return config;
   },
+  async redirects() {
+    return [
+      {
+        source: "/product",
+        destination: "/",
+        permanent: false,
+      },
+    ];
+  },
 };

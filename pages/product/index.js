@@ -1,12 +1,5 @@
-export default function Product() {
-  return;
-}
+import NoProduct from "../../components/NoProduct";
 
-export async function getStaticProps() {
-  return {
-    redirect: {
-      destination: "/",
-      permanent: true,
-    },
-  };
+export default function Product() {
+  return <NoProduct />;
 }
