@@ -9,7 +9,8 @@ function addPage(page) {
 
   return `  <url>
     <loc>${`${process.env.BASE_URL}${route}`}</loc>
-    <changefreq>hourly</changefreq>
+    <lastmod>${new Date().toISOString()}</lastmod>    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
   </url>`;
 }
 
@@ -23,12 +24,17 @@ async function generateSitemap() {
         "_document.js",
         "_error.js",
         "sitemap.xml.js",
+        "api",
       ].includes(staticPage);
     })
     .map((staticPagePath) => {
-      return `${process.env.BASE_URL}/${staticPagePath}`;
+      return `/${staticPagePath}`;
     });
+
+  console.log(pages);
+
   const sitemap = `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
 ${pages.map(addPage).join("\n")}
 </urlset>`;
 
