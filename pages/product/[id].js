@@ -35,6 +35,10 @@ const DetailProduct = (props) => {
     <div className="row detail_page">
       <Head>
         <title>Detail Product</title>
+        <meta
+          name="description"
+          content={product.description + ", " + product.content}
+        />
       </Head>
 
       <div className="col-md-6 ">
