@@ -29,6 +29,8 @@ async function generateSitemap() {
     })
     .map((staticPagePath) => {
       return `${staticPagePath}`;
+      // vercel use automatic trailing Slash
+      // return `/${staticPagePath}`; NO NEED if use Vercel
     });
 
   const sitemap = `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
