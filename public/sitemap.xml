@@ -1,73 +1,73 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>http://localhost:3000/cart</loc>
-    <lastmod>2022-03-24T13:55:48.904Z</lastmod>    <changefreq>monthly</changefreq>
+    <loc>http://localhost:3000cart</loc>
+    <lastmod>2022-03-24T22:17:10.163Z</lastmod>    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://localhost:3000/categories</loc>
-    <lastmod>2022-03-24T13:55:48.904Z</lastmod>    <changefreq>monthly</changefreq>
+    <loc>http://localhost:3000categories</loc>
+    <lastmod>2022-03-24T22:17:10.163Z</lastmod>    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://localhost:3000/create</loc>
-    <lastmod>2022-03-24T13:55:48.904Z</lastmod>    <changefreq>monthly</changefreq>
+    <loc>http://localhost:3000create</loc>
+    <lastmod>2022-03-24T22:17:10.163Z</lastmod>    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://localhost:3000/edit_user</loc>
-    <lastmod>2022-03-24T13:55:48.904Z</lastmod>    <changefreq>monthly</changefreq>
+    <loc>http://localhost:3000edit_user</loc>
+    <lastmod>2022-03-24T22:17:10.163Z</lastmod>    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://localhost:3000/forgot-password</loc>
-    <lastmod>2022-03-24T13:55:48.904Z</lastmod>    <changefreq>monthly</changefreq>
+    <loc>http://localhost:3000forgot-password</loc>
+    <lastmod>2022-03-24T22:17:10.163Z</lastmod>    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>http://localhost:3000</loc>
-    <lastmod>2022-03-24T13:55:48.904Z</lastmod>    <changefreq>monthly</changefreq>
+    <lastmod>2022-03-24T22:17:10.163Z</lastmod>    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://localhost:3000/order</loc>
-    <lastmod>2022-03-24T13:55:48.904Z</lastmod>    <changefreq>monthly</changefreq>
+    <loc>http://localhost:3000order</loc>
+    <lastmod>2022-03-24T22:17:10.163Z</lastmod>    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://localhost:3000/product</loc>
-    <lastmod>2022-03-24T13:55:48.904Z</lastmod>    <changefreq>monthly</changefreq>
+    <loc>http://localhost:3000product</loc>
+    <lastmod>2022-03-24T22:17:10.163Z</lastmod>    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://localhost:3000/profile</loc>
-    <lastmod>2022-03-24T13:55:48.904Z</lastmod>    <changefreq>monthly</changefreq>
+    <loc>http://localhost:3000profile</loc>
+    <lastmod>2022-03-24T22:17:10.163Z</lastmod>    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://localhost:3000/register</loc>
-    <lastmod>2022-03-24T13:55:48.904Z</lastmod>    <changefreq>monthly</changefreq>
+    <loc>http://localhost:3000register</loc>
+    <lastmod>2022-03-24T22:17:10.163Z</lastmod>    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://localhost:3000/reset-password</loc>
-    <lastmod>2022-03-24T13:55:48.904Z</lastmod>    <changefreq>monthly</changefreq>
+    <loc>http://localhost:3000reset-password</loc>
+    <lastmod>2022-03-24T22:17:10.163Z</lastmod>    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://localhost:3000/signin</loc>
-    <lastmod>2022-03-24T13:55:48.904Z</lastmod>    <changefreq>monthly</changefreq>
+    <loc>http://localhost:3000signin</loc>
+    <lastmod>2022-03-24T22:17:10.163Z</lastmod>    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://localhost:3000/users</loc>
-    <lastmod>2022-03-24T13:55:48.904Z</lastmod>    <changefreq>monthly</changefreq>
+    <loc>http://localhost:3000users</loc>
+    <lastmod>2022-03-24T22:17:10.163Z</lastmod>    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>http://localhost:3000/verify-email</loc>
-    <lastmod>2022-03-24T13:55:48.904Z</lastmod>    <changefreq>monthly</changefreq>
+    <loc>http://localhost:3000verify-email</loc>
+    <lastmod>2022-03-24T22:17:10.163Z</lastmod>    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
 </urlset>

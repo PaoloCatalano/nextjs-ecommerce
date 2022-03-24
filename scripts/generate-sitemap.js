@@ -5,7 +5,7 @@ const fs = require("fs");
 
 function addPage(page) {
   const path = page.replace("pages", "").replace(".js", "").replace(".mdx", "");
-  const route = path === "/index" ? "" : path;
+  const route = path === "index" ? "" : path;
 
   return `  <url>
     <loc>${`${process.env.BASE_URL}${route}`}</loc>
@@ -30,8 +30,6 @@ async function generateSitemap() {
     .map((staticPagePath) => {
       return `${staticPagePath}`;
     });
-
-  console.log(pages);
 
   const sitemap = `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
