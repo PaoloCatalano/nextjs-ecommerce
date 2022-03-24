@@ -28,7 +28,7 @@ async function generateSitemap() {
       ].includes(staticPage);
     })
     .map((staticPagePath) => {
-      return `/${staticPagePath}`;
+      return `${staticPagePath}`;
     });
 
   console.log(pages);
